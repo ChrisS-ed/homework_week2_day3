@@ -1,8 +1,12 @@
 require "pry-byebug"
 require_relative("game")
+require_relative("win_checker")
+#require_relative("rubbish_win_checker")
 
 # create game
-game = Game.new()
+win_checker_1 = WinChecker.new()
+#rubbish = RubbishWinChecker.new()
+game = Game.new(win_checker_1)
 # place piece
 game.place_piece(0,0)
 # display board
@@ -64,7 +68,7 @@ game.place_piece(2,2)
 
 
 
-binding.pry; " "
+#binding.pry; " "
 
 
 
